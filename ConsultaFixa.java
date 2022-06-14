@@ -233,7 +233,7 @@ public class ConsultaFixa extends javax.swing.JFrame {
 
     public void consultar() {
         try {
-            if (!cxNome.getText().trim().equals("")) {
+            if (!cxNome.getText().trim().isEmpty()) {
                 invest = new Fixa(cxNome.getText());
                 invest = MenuByteInvest.getConta().getGerInvest().consInvestNome(invest);
                 if (invest != null) {

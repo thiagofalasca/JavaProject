@@ -172,7 +172,7 @@ public class CadVar extends javax.swing.JFrame {
     public void cadastrar() {
         try {
             gerInvest = MenuByteInvest.getConta().getGerInvest();
-            if (!(cxInstFin.getText().trim().equals("") || cxNomeInvest.getText().trim().equals("") || cxCotacao.getText().trim().equals("") || cxCodigo.getText().trim().equals("") || cxQuant.getText().trim().equals(""))) {
+            if (!(cxInstFin.getText().trim().isEmpty() || cxNomeInvest.getText().trim().isEmpty() || cxCotacao.getText().trim().isEmpty() || cxCodigo.getText().trim().isEmpty() || cxQuant.getText().trim().isEmpty())) {
                 invest = new Variavel(cxInstFin.getText(), cxNomeInvest.getText(), cxCodigo.getText(), Integer.parseInt(cxQuant.getText()), Float.parseFloat(cxCotacao.getText()));
                 invest = gerInvest.cadInvest(invest);
                 if (invest != null) {
@@ -191,7 +191,7 @@ public class CadVar extends javax.swing.JFrame {
 
     public void excluir() {
         gerInvest = MenuByteInvest.getConta().getGerInvest();
-        if (!cxNomeInvest.getText().trim().equals("")) {
+        if (!cxNomeInvest.getText().trim().isEmpty()) {
             invest = new Variavel(cxNomeInvest.getText());
             invest = gerInvest.consInvestNome(invest);
             if (invest != null) {

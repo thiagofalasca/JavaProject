@@ -173,7 +173,7 @@ public class CadCorrente extends javax.swing.JFrame {
 
     public void excluir() {
         gerInvest = MenuByteInvest.getConta().getGerInvest();
-        if (!cxNomeInvest.getText().trim().equals("")) {
+        if (!cxNomeInvest.getText().trim().isEmpty()) {
             invest = new ContaCorrente(cxNomeInvest.getText());
             invest = gerInvest.consInvestNome(invest);
             if (invest != null) {
@@ -194,7 +194,7 @@ public class CadCorrente extends javax.swing.JFrame {
         try {
             gerInvest = MenuByteInvest.getConta().getGerInvest();
             int CDI = 0;
-            if (!(cxInstFin.getText().trim().equals("") || cxNomeInvest.getText().trim().equals("") || cxNomeBanco.getText().trim().equals("") || cxValorAplicado.getText().trim().equals(""))) {
+            if (!(cxInstFin.getText().trim().isEmpty() || cxNomeInvest.getText().trim().isEmpty() || cxNomeBanco.getText().trim().isEmpty() || cxValorAplicado.getText().trim().isEmpty())) {
                 if (String.valueOf(cbRent.getSelectedItem()).equals("Sim")) {
                     CDI = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite a procentagem do CDI que a conta rende!", "Porcentagem CDI", JOptionPane.QUESTION_MESSAGE));
                 }

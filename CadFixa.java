@@ -180,7 +180,7 @@ public class CadFixa extends javax.swing.JFrame {
 
     public void excluir() {
         gerInvest = MenuByteInvest.getConta().getGerInvest();
-        if (!cxNomeInvest.getText().trim().equals("")) {
+        if (!cxNomeInvest.getText().trim().isEmpty()) {
             invest = new Fixa(cxNomeInvest.getText());
             invest = gerInvest.consInvestNome(invest);
             if (invest != null) {
@@ -200,7 +200,7 @@ public class CadFixa extends javax.swing.JFrame {
     public void cadastrar() {
         try {
             gerInvest = MenuByteInvest.getConta().getGerInvest();
-            if (!(cxInstFin.getText().trim().equals("") || cxNomeInvest.getText().trim().equals("") || cxPapel.getText().trim().equals("") || cxValor.getText().trim().equals("") || cxTaxaAno.getText().trim().equals(""))) {
+            if (!(cxInstFin.getText().trim().isEmpty() || cxNomeInvest.getText().trim().isEmpty() || cxPapel.getText().trim().isEmpty() || cxValor.getText().trim().isEmpty() || cxTaxaAno.getText().trim().isEmpty())) {
                 invest = new Fixa(cxInstFin.getText(), cxNomeInvest.getText(), Float.parseFloat(cxValor.getText()),
                         cxPapel.getText(), String.valueOf(cbImposto.getSelectedItem()), Double.parseDouble(cxTaxaAno.getText()));
                 invest = gerInvest.cadInvest(invest);

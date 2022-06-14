@@ -157,7 +157,7 @@ public class CadConta extends javax.swing.JFrame {
 
     public void criaConta() {
         try {
-            if (!(cxUsuario.getText().trim().equals("") || cxSenha.getText().trim().equals("") || cxNome.getText().trim().equals(""))) {
+            if (!(cxUsuario.getText().trim().isEmpty() || cxSenha.getText().trim().isEmpty() || cxNome.getText().trim().isEmpty())) {
                 conta = new Conta(cxUsuario.getText(), cxSenha.getText(), cxNome.getText(), Integer.parseInt(cxCpf.getText()), Integer.parseInt(cxIdade.getText()));
                 conta = gerConta.cadConta(conta);
                 if (conta != null) {

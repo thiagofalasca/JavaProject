@@ -328,7 +328,7 @@ public class MenuByteInvest extends javax.swing.JFrame {
     public void alterar() {
         if (conta.getSenha().equals(JOptionPane.showInputDialog(null, "Digite a senha atual", "Senha Atual", JOptionPane.QUESTION_MESSAGE))) {
             String senhaNova = CadConta.getGerConta().alterarContaUsuario(conta);
-            if (senhaNova.equals("")) {
+            if (senhaNova.isEmpty()) {
                 conta.setSenha(senhaNova);
             }
         } else {

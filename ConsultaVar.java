@@ -206,7 +206,7 @@ public class ConsultaVar extends javax.swing.JFrame {
 
     public void consultar() {
         try {
-            if (!cxNomeInvest.getText().trim().equals("")) {
+            if (!cxNomeInvest.getText().trim().isEmpty()) {
                 invest = new Variavel(cxNomeInvest.getText());
                 invest = MenuByteInvest.getConta().getGerInvest().consInvestNome(invest);
                 if (invest != null) {

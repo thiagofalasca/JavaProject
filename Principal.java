@@ -136,7 +136,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     public void entrar() {
-        if (!(cxUsuario.getText().trim().equals("") || cxSenha.getText().trim().equals(""))) {
+        if (!(cxUsuario.getText().trim().isEmpty() || cxSenha.getText().trim().isEmpty())) {
             conta = new Conta(cxUsuario.getText(), cxSenha.getText());
             conta = CadConta.getGerConta().consContaUsuario(conta);
 
