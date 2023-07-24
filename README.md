@@ -1,6 +1,6 @@
-# ProjetoJava
-Projeto java que simula uma corretora simples!
+# JavaProject
+Java project that simulates a simple brokerage!
 
-Esse projeto foi realizado durante a diciplica de Programação Orientada a Objetos.
+This project was carried out during the Object-Oriented Programming course.
 
-O projeto foi desenvolvido através da IDE NetBeans, e tem a função de simular uma corretora, com interface gráfica, cálculos de rentabilidade e outros.
+The project was developed using the NetBeans IDE and its purpose is to simulate a brokerage firm, with a graphical interface, profitability calculations, and more.
